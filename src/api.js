@@ -28,5 +28,9 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+// 결과 : 요청 성공, 응답 실패
+// 이유 :  404 error = > const response = await api.get("/posts");
+// 데이터 요청을 todos가 아닌  posts로 했기 때문.
+// todos로 바꾸면 요청과 응답이 정상적으로 출력됩니다
 
 export default api;
